@@ -20,11 +20,11 @@ export const App = () => {
   useEffect(() => {
     if (firstRender.current) {
       firstRender.current = false;
-      console.log('Первый рендер');
+      
       return;
     }
     localStorage.setItem('contactsData', JSON.stringify(contacts));
-    console.log('Второй рендер ');
+
   }, [contacts]);
 
   const onSubmiHandler = (name, number) => {
